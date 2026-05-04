@@ -23,7 +23,6 @@ from .interpolation import (
     piecewise_constant_interpolation,
     concave_regression,
     milp_interpolation_problem,
-    sos1_interpolation_problem,
     interpolation_mesh,
 )
 
@@ -111,7 +110,6 @@ __all__ = [
     'piecewise_constant_interpolation',
     'concave_regression',
     'milp_interpolation_problem',
-    'sos1_interpolation_problem',
     'interpolation_mesh',
     # Optimization
     'robust_optimization',

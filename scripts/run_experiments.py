@@ -35,7 +35,6 @@ from src import (
     piecewise_constant_interpolation,
     concave_regression,
     milp_interpolation_problem,
-    sos1_interpolation_problem,
     interpolation_mesh,
     robust_optimization,
     piecewise_constant_optimization,
@@ -393,7 +392,6 @@ def run_scalability_sample(cfg: Config, n_rep: int = 50):
         print(f"  n_samples = {n_samples}...")
         t_binary_total = 0.0
         t_milp_total = 0.0
-        t_sos1_total = 0.0
         
         for rep in range(n_rep):
             print(f"    rep {rep + 1}/{n_rep}...")
@@ -406,7 +404,6 @@ def run_scalability_sample(cfg: Config, n_rep: int = 50):
                                       y_sorted, idx_order, cfg.L)
             t_milp_total += runtime(milp_interpolation_problem, x_new, X_samples,
                                     y_sorted, idx_order, cfg.L)
-
         
         results.append({
             'n_samples': n_samples,
@@ -472,7 +469,6 @@ def run_scalability_dimension(cfg: Config, n_rep: int = 20):
         print(f"  n_features = {n_features}...")
         t_binary_total = 0.0
         t_milp_total = 0.0
-        t_sos1_total = 0.0
         
         for _ in range(n_rep):
             X_samples = np.random.uniform(cfg.x_min, cfg.x_max, size=(n_samples, n_features))
@@ -489,14 +485,11 @@ def run_scalability_dimension(cfg: Config, n_rep: int = 20):
                                       y_sorted, idx_order, cfg.L)
             t_milp_total += runtime(milp_interpolation_problem, x_new, X_samples,
                                     y_sorted, idx_order, cfg.L)
-            t_sos1_total += runtime(sos1_interpolation_problem, x_new, X_samples,
-                                    y_sorted, idx_order, cfg.L)
         
         results.append({
             'n_features': n_features,
             'time_binary': t_binary_total / n_rep,
             'time_milp': t_milp_total / n_rep,
-            'time_sos1': t_sos1_total / n_rep,
         })
     
     df = pd.DataFrame(results)
