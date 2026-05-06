@@ -166,6 +166,14 @@ Running the experiments will generate:
    - `df_scalability_*.csv`: Computational scalability results
    - `df_maxmin_*.csv`: Max-min experiment results
 
+## Originality Statement
+
+All source code in this repository, including all scripts and implementation files, is original work developed by the authors specifically for this paper. No part of the code has been used in other projects by the authors or third parties.
+
+## Data Generation
+
+All experimental data used in this repository is randomly generated using procedures developed by the authors. The data generation methods are implemented within the source code (see `src/core.py` and `src/maxmin_utility.py` for the sampling procedures).
+
 ## Support
 
 For questions about the code, please contact the authors or submit an issue on this repository.
