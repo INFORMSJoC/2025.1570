@@ -7,7 +7,7 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[Robust Data-Driven Quasiconcave Optimization](https://doi.org/10.1287/ijoc.2025.1570) by J. Wu, W. Huang, W. B. Haskell, and H. Xu.
+[Robust Data-Driven Quasiconcave Optimization](https://doi.org/10.1287/ijoc.2025.1570) by J. Wu, W. B. Haskell, W. Huang, and H. Xu.
 
 ## Cite
 
@@ -21,7 +21,7 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ```
 @misc{RobustQuasiconcaveOpt,
-  author =        {J. Wu and W. Huang and W. B. Haskell and H. Xu},
+  author =        {J. Wu and W. B. Haskell and W. Huang and H. Xu},
   publisher =     {INFORMS Journal on Computing},
   title =         {{Robust Data-Driven Quasiconcave Optimization}},
   year =          {2026},
